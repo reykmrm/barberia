@@ -1,4 +1,5 @@
 <template>
+  <!-- card con precios y nombre del servicio -->
   <div class="tamaño" >  
   <div class="max-w-sm rounded overflow-hidden shadow-lg">
   <img class="tamanoIme"
@@ -18,9 +19,11 @@
 <script>
 export default {
   props: {
-    indexSercicio:Number,
+    //precio que aparece en el car
     precioServicio: [],
+    //nombre del servicio del card
     nombreServicio: [],
+    //imagen que aparece en el car
     srcImagen:[],
   },
   data(){

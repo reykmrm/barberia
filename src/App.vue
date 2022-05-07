@@ -3,9 +3,24 @@
     <router-link to="/">Inicio</router-link> |
     <router-link to="/cortedamas">Mujeres</router-link> |
     <router-link to="/cortehombres">Hombres</router-link>
+    <componetInput class="input"/>
   </nav>
   <router-view/>
 </template>
+<script>
+import { defineComponent } from 'vue'
+import componetInput from './components/componetInput.vue'
+
+export default defineComponent({
+  setup() {
+    
+  },
+  components: {
+    componetInput,
+  }
+})
+</script>
+
 
 <style scoped>
 #app {
@@ -13,6 +28,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+}
+
+.input{
+  display: inline-block;
+  float: right;
 }
 
 nav {

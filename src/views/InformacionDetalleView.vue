@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import componetFotoPerfil from '@/components/componetInformacionDetalleMujer.vue'
+import componetFotoPerfil from '@/components/componetInformacionDetalle.vue'
 
 
 export default ({
