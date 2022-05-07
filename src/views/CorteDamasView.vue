@@ -1,27 +1,12 @@
 <template>
   <div class="home">
-    <router-link to="/InformacionDetalleView" >
+    <router-link to="/informaciondetallemujerView" >
       <div class="destacados">
       <h1 class="titulo">
         <a href="#">Destacados</a>
       </h1>
       <hello-worldf  class="contenido"
-        v-for="(cortes, indexSercicio) in cortesHombres" :key="indexSercicio"
-        :precioServicio="cortes.precio"
-        :nombreServicio="cortes.nombre"
-        :src-imagen="cortes.src"
-        :indexSercicio="indexSercicio"
-        v-on:click="tomarId(indexSercicio)"
-      />
-    </div>
-    </router-link>
-    <router-link to="/InformacionDetalleView" >
-      <div class="destacados">
-      <h1 class="titulo">
-        <a href="#">Destacados</a>
-      </h1>
-      <hello-worldf  class="contenido"
-        v-for="(cortes, indexSercicio) in cortesHombres" :key="indexSercicio"
+        v-for="(cortes, indexSercicio) in filterMujerS" :key="indexSercicio"
         :precioServicio="cortes.precio"
         :nombreServicio="cortes.nombre"
         :src-imagen="cortes.src"
@@ -36,11 +21,12 @@
 <script scoped>
 // @ is an alias to /src
 import HelloWorldf from '@/components/componentServicios.vue'
-import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations, mapGetters } from 'vuex'
 
 export default {
   computed: {
-    ...mapState( ['cortesHombres'] ),
+    ...mapState( ['cortesHombres','tipoPersonaS'] ),
+    ...mapGetters(['filterMujerS'])
   },
   data() {
     return {
@@ -54,11 +40,7 @@ export default {
     HelloWorldf,
   },
   methods: {
-    ...mapMutations(['tomarId']),
-    imprimir(e){
-      this.valorCli = e;
-      alert(this.valorCli)
-    }
+    ...mapMutations(['tomarId', 'flterMujer']),
   }
 }
 </script>

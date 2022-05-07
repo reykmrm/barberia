@@ -18,7 +18,7 @@
 </template>
 <script>
 import componetFotoPerfil from '@/components/componetFotoPerfil.vue'
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 export default {
     data() {
         
@@ -27,7 +27,8 @@ export default {
         componetFotoPerfil,
     },
     computed: {
-        ...mapState (['cortesHombres', 'valor', 'personas'])
+        ...mapState (['cortesHombres', 'valor', 'personas']),
+        ...mapGetters(['filterMujerS'])
     }
 }
 </script>

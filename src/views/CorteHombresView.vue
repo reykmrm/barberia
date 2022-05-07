@@ -1,28 +1,13 @@
 <template>
   
   <div class="home">
-      <router-link to="/InformacionDetalleView" >
+      <router-link to="/informaciondetallleHombreView" >
       <div class="destacados">
       <h1 class="titulo">
         <a href="#">Destacados</a>
       </h1>
       <hello-worldf  class="contenido"
-        v-for="(cortes, indexSercicio) in cortesHombres" :key="indexSercicio"
-        :precioServicio="cortes.precio"
-        :nombreServicio="cortes.nombre"
-        :src-imagen="cortes.src"
-        :indexSercicio="indexSercicio"
-        v-on:click="tomarId(indexSercicio)"
-      />
-    </div>
-    </router-link>
-    <router-link to="/InformacionDetalleView" >
-      <div class="destacados">
-      <h1 class="titulo">
-        <a href="#">Destacados</a>
-      </h1>
-      <hello-worldf  class="contenido"
-        v-for="(cortes, indexSercicio) in cortesHombres" :key="indexSercicio"
+        v-for="(cortes, indexSercicio) in filterHombresS" :key="indexSercicio"
         :precioServicio="cortes.precio"
         :nombreServicio="cortes.nombre"
         :src-imagen="cortes.src"
@@ -38,11 +23,12 @@
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
 import HelloWorldf from '@/components/componentServicios.vue'
-import { mapState, mapMutations } from 'vuex'
+import { mapState, mapMutations, mapGetters } from 'vuex'
 
 export default {
   computed: {
     ...mapState( ['cortesHombres'] ),
+    ...mapGetters(['filterHombresS'])
   },
   data() {
     return {

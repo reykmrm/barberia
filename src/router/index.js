@@ -3,6 +3,8 @@ import HomeView from '../views/HomeView.vue'
 import corteDamas from '../views/CorteDamasView.vue'
 import InformaciondetalleView from '../views/InformacionDetalleView.vue'
 import cortehombres from '../views/CorteHombresView.vue'
+import informaciondetallemujerView from '../views/InformacionDetalleMujerView.vue'
+import informaciondetallleHombreView from '../views/InformacionDetalleHombreView.vue'
 
 const routes = [
   {
@@ -24,6 +26,16 @@ const routes = [
     path: '/cortehombres',
     name: 'cortehombres',
     component: cortehombres
+  },
+  {
+    path: '/informaciondetallemujerView',
+    name: 'informaciondetallemujerView',
+    component: informaciondetallemujerView
+  },
+  {
+    path: '/informaciondetallleHombreView',
+    name: 'informaciondetallleHombreView',
+    component: informaciondetallleHombreView
   },
   {
     path: '/about',

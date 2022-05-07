@@ -3,13 +3,10 @@
 </template>
 
 <script>
-import componetFotoPerfil from '@/components/componetInformacionDetalle.vue'
-import { mapState } from 'vuex'
+import componetFotoPerfil from '@/components/componetInformacionDetalleMujer.vue'
+
 
 export default ({
-     computed: {
-        ...mapState(['personas', 'valor', 'cortesHombres']),
-    },
     data() {
         return {
             
