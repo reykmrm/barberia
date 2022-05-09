@@ -3,20 +3,57 @@
     <router-link to="/">Inicio</router-link> |
     <router-link to="/cortedamas">Mujeres</router-link> |
     <router-link to="/cortehombres">Hombres</router-link>
-    <componetInput class="input"/>
+    <componetInput class="input" @input="boscarServicio" v-on:input="buscarServicio(this.resultBusqueda)"/>
   </nav>
   <router-view/>
+      <div class="" v-if="mostaraBusqueda">
+      <h1>
+        <a>Busqueda</a>
+      </h1>
+      <router-link to="/InformacionDetalleView">
+      <div class="destacados">
+        <hello-worldf  class="contenido"
+          v-for="(cortes, indexSercicio) in buscarServicio" :key="indexSercicio"
+          :precioServicio="cortes.precio"
+          :nombreServicio="cortes.nombre"
+          :src-imagen="cortes.src"
+          :indexSercicio="indexSercicio"
+          v-on:click="tomarId(indexSercicio)"
+        />
+      </div>
+      </router-link>
+    </div>
+    <p>{{ thibuscarServicio }}</p>
 </template>
 <script>
 import { defineComponent } from 'vue'
+import { mapMutations, } from 'vuex'
 import componetInput from './components/componetInput.vue'
+import HelloWorldf from '@/components/componentServicios.vue'
 
 export default defineComponent({
-  setup() {
-    
+  data() {
+    return {
+      mostaraBusqueda: false,
+      resultBusqueda: '',
+    }
   },
+
   components: {
     componetInput,
+    HelloWorldf,
+  },
+  methods: {
+    ...mapMutations(['buscarServicio',]),
+    boscarServicio(e){
+      this.resultBusqueda = e.target.value;
+      if (this.resultBusqueda === '') {
+        this.mostaraBusqueda = false;
+      }else{
+        this.mostaraBusqueda = true;
+      }
+      return this.resultBusqueda
+    },
   }
 })
 </script>

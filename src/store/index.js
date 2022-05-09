@@ -102,9 +102,15 @@ export default createStore({
     tomarId(state, n){
       state.valor = n
     },
+    buscarServicio(state,dato){
+      state.tipoPersonaS = state.cortesHombres.filter((elem) => elem.nombre.includes(dato))
+      return state.tipoPersonaS,
+      console.log(state.tipoPersonaS)
+    },
   },
   actions: {
   },
   modules: {
+
   }
 })
