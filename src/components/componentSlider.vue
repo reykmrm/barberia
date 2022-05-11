@@ -3,15 +3,15 @@
     <div class="carousel-inner">
         <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
         <div class="carousel-item">
-            <img src="../assets/hombre/hombre1.jpg">
+            <img src="../assets/slider.jpg">
         </div>
         <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-            <img src="../assets/imagenq.png">
+            <img src="../assets/slider.jpg">
         </div>
         <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
         <div class="carousel-item">
-            <img src="../assets/imagenq.png">
+            <img src="../assets/slider.jpg">
         </div>
         <label for="carousel-3" class="carousel-control prev control-1">-</label>
         <label for="carousel-2" class="carousel-control next control-1">-</label>
@@ -45,7 +45,7 @@
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     margin-top: 26px;
     border: 3%;
-    margin: 3%;
+    margin-top: 4%;
 }
 
 .carousel-inner {

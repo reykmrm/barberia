@@ -1,9 +1,19 @@
 <template>
-  <nav>
-    <router-link to="/">Inicio</router-link> |
-    <router-link to="/cortedamas">Mujeres</router-link> |
-    <router-link to="/cortehombres">Hombres</router-link>
-    <componetInput class="input" @input="boscarServicio" v-on:input="buscarServicio(this.resultBusqueda)"/>
+
+  <nav class="">
+    <router-link to="/">INICIO</router-link> |
+    <router-link to="/cortedamas">MUJERES</router-link> |
+    <router-link to="/cortehombres">HOMBRES</router-link>
+    <div class="containe">
+    <componetInput class="mr-3" @input="boscarServicio" v-on:input="buscarServicio(this.resultBusqueda)"/>
+     <button class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-600 to-yellow-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+    <span class="relative px-5 p-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+      <router-link to="/login">
+        Login
+      </router-link>
+  </span>
+</button>
+    </div>
   </nav>
   <router-view/>
       <div class="" v-if="mostaraBusqueda">
@@ -61,23 +71,24 @@ export default defineComponent({
 
 <style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 
 .input{
-  display: inline-block;
+  margin-right:15px;
+}
+.containe{
+  display: flex;
   float: right;
 }
 
 nav {
-  padding: 30px;
-  background: #a4c7eb;
-  color: black;
+  font-family: inherit;
+  padding-top: 20px;
+  background: #343434;
+  color: #bc9815;
   letter-spacing: 3px;
-  text-align: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -87,10 +98,10 @@ nav {
 
 nav a {
   font-weight: bold;
-  padding: 35px;
+  padding: 20px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ffb300;
 }
 </style>

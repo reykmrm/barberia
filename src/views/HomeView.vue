@@ -1,10 +1,10 @@
 <template>
 <div>
+<SliderTaiwin/>
   <div class="home">
-  <p class="margin"></p>
-    <div class="">
-      <h1>
-        <a>Destacados</a>
+    <div class="overflow-x-scroll tamano1">
+      <h1 class="titulo">
+        Destacados
       </h1>
       <router-link to="/InformacionDetalleView">
       <div class="destacados">
@@ -20,9 +20,9 @@
       </router-link>
     </div>
    
-    <div class="">
-      <h1>
-        <a>Destacados</a>
+    <div class="overflow-x-scroll">
+      <h1 class="titulo">
+        Destacados
       </h1>
       <router-link to="/InformacionDetalleView">
       <div class="destacados">
@@ -45,6 +45,7 @@
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
 import HelloWorldf from '@/components/componentServicios.vue'
+import SliderTaiwin from '@/components/componentSlider.vue'
 import { mapState, mapMutations } from 'vuex'
 
 export default {
@@ -61,6 +62,7 @@ export default {
   components: {
     //HelloWorld,
     HelloWorldf,
+    SliderTaiwin,
   },
   methods: {
     ...mapMutations(['tomarId']),
@@ -78,19 +80,22 @@ export default {
   padding:20px;
 }
 
-.margin{
-  margin-top: 90px;
+.contenido{
+  margin:15px;
+  flex-basis: 200px;
 }
 
 .destacados{
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  display: inline-flex;
 }
 .titulo{
+  margin-top: 40px;
   justify-self: start;
   padding-left: 5px;
-  padding-bottom:30px;
   font-size:2rem;
+}
+.tamano1{
+  width:100%;
+  height:400px;
 }
 </style>

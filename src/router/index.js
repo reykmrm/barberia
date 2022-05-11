@@ -6,6 +6,7 @@ import cortehombres from '../views/CorteHombresView.vue'
 import informaciondetallemujerView from '../views/InformacionDetalleMujerView.vue'
 import informaciondetallleHombreView from '../views/InformacionDetalleHombreView.vue'
 import buscarservicios from '../views/BuscarServicios.vue'
+import LoginView from '../views/LoginView.vue'
 
 const routes = [
   {
@@ -42,6 +43,11 @@ const routes = [
     path: '/buscarservicios',
     name: 'buscarservicios',
     component: buscarservicios
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: LoginView
   },
   {
     path: '/about',

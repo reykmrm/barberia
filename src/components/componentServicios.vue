@@ -1,7 +1,7 @@
 <template>
   <!-- card con precios y nombre del servicio -->
-  <div class="tamaño" >  
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
+  <div class="tamano" >  
+  <div class="rounded-2xl overflow-hidden shadow-lg rounded-3xl">
   <img class="tamanoIme"
   :src="srcImagen" alt="Sunset in the mountains">
   <div class="px-6 py-4">
@@ -35,14 +35,18 @@ export default {
 </script>
 
 <style scoped>
+.shadow-lg:hover{
+  border:1px solid rgb(255, 208, 0);
+}
 .tamanoIme{
   width:150px;
-  height:120px;
+  height:150px;
   margin:auto;
   padding:10px;
+  border-radius: 50%;
 }
-.tamaño{
-  margin: 10px;
+.tamano{
+  margin-top: 30px;
   width:200px;
   height:250px;
 }
