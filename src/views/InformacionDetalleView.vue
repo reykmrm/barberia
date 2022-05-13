@@ -1,29 +1,24 @@
 <template>
-    <componet-foto-perfil class="compnerFoto"/>
+  <componet-foto-perfil class="compnerFoto" />
 </template>
 
 <script>
-import componetFotoPerfil from '@/components/componetInformacionDetalle.vue'
+import componetFotoPerfil from "@/components/componetInformacionDetalle.vue";
 
-
-export default ({
-    data() {
-        return {
-            
-        }
-    },
-    components: {
-        componetFotoPerfil,
-    },
-   
-})
+export default {
+  data() {
+    return {};
+  },
+  components: {
+    componetFotoPerfil,
+  },
+};
 </script>
 
 <style scoped>
-.compnerFoto{
-    margin-top:100px;
-    margin-left: auto;
-    margin-right:auto;
-
+.compnerFoto {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
