@@ -6,7 +6,11 @@
     <router-link to="/cortehombres">HOMBRES</router-link>
     <div class="containe">
     <componetInput class="mr-3" @input="boscarServicio" v-on:input="buscarServicio(this.resultBusqueda)"/>
-     <button class="relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-orange-600 to-yellow-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+     <button class="botonLogin relative inline-flex items-center justify-center p-0.5 mb-2 overflow-hidden text-sm font-medium 
+     text-gray-900 rounded-lg group bg-gradient-to-br from-orange-600 
+     to-yellow-500 group-hover:from-purple-600 group-hover:to-blue-500 
+     hover:text-white dark:text-white focus:ring-4 
+     focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
     <span class="relative px-5 p-2 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
       <router-link to="/login">
         Login
@@ -103,5 +107,9 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #ffb300;
+}
+
+.botonLogin{
+  margin-right: 20px;
 }
 </style>

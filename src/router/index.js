@@ -7,6 +7,7 @@ import informaciondetallemujerView from '../views/InformacionDetalleMujerView.vu
 import informaciondetallleHombreView from '../views/InformacionDetalleHombreView.vue'
 import buscarservicios from '../views/BuscarServicios.vue'
 import LoginView from '../views/LoginView.vue'
+import registropersona from '../views/RegistroPersonaView.vue'
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/login',
     name: 'login',
     component: LoginView
+  },
+  {
+    path: '/registropersona',
+    name: 'registropersona',
+    component: registropersona
   },
   {
     path: '/about',

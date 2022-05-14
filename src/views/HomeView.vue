@@ -1,12 +1,6 @@
 <template>
   <div>
     <div class="slider">
-      <label for="carousel-3" class="carousel-control prev control-1">-</label>
-      <label for="carousel-2" class="carousel-control next control-1">-</label>
-      <label for="carousel-1" class="carousel-control prev control-2">-</label>
-      <label for="carousel-3" class="carousel-control next control-2">-</label>
-      <label for="carousel-2" class="carousel-control prev control-3">-</label>
-      <label for="carousel-1" class="carousel-control next control-3">-</label>
       <SliderTaiwin />
     </div>
     <div class="home">
@@ -46,16 +40,27 @@
         </router-link>
       </div>
     </div>
-    <img src="../assets/imagenn.png" alt="" srcset="" height="300px" />
+    <div class="imagen">
+      <img src="../assets/imagenn.png" alt="" srcset="" height="300px" />
+      <div class="textoImagen">
+        <h1 class="titulo">LA FELICIDAD ES AHORA</h1>
+        <p class="texto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eligendi
+          impedit aliquam optio atque magnam ipsum voluptates, aperiam quasi
+          nihil iusto commodi hic eius, porro deserunt illum! Iure, quidem
+          ipsam.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script scoped>
 // @ is an alias to /src
 //import HelloWorld from '@/components/HelloWorld.vue'
-import HelloWorldf from "@/components/componentServicios.vue";
-import SliderTaiwin from "@/components/componentSlider.vue";
-import { mapState, mapMutations } from "vuex";
+import HelloWorldf from "@/components/componentServicios.vue"
+import SliderTaiwin from "@/components/componentSlider.vue"
+import { mapState, mapMutations } from "vuex"
 
 export default {
   computed: {
@@ -65,7 +70,7 @@ export default {
     return {
       precioServicio: 3000,
       valorCli: Number,
-    };
+    }
   },
   name: "HomeView",
   components: {
@@ -76,11 +81,11 @@ export default {
   methods: {
     ...mapMutations(["tomarId"]),
     imprimir(e) {
-      this.valorCli = e;
-      alert(this.valorCli);
+      this.valorCli = e
+      alert(this.valorCli)
     },
   },
-};
+}
 </script>
 
 <style scoped>
@@ -122,5 +127,28 @@ export default {
   width: 100%;
   height: 400px;
   overflow: hidden;
+}
+
+.imagen {
+  width: 100;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+}
+
+.textoImagen {
+  color: white;
+  position: absolute;
+}
+.textoImagen .titulo {
+  font-family: inherit;
+  color: #ffb300;
+  font-size: 6rem;
+  margin: 100px 10px 20px 30px;
+}
+
+.textoImagen .texto {
+  font-size: 2rem;
+  margin: 100px 40px 0 100px;
 }
 </style>
