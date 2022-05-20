@@ -1,10 +1,10 @@
 <template>
   <!-- card con precios y nombre del servicio -->
-  <div class="tamano">
+  <div class="tamano xs:m-30">
     <div class="rounded-2xl overflow-hidden shadow-lg rounded-3xl">
       <img class="tamanoIme" :src="srcImagen" alt="Sunset in the mountains" />
       <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{{ nombreServicio }}</div>
+        <div class="font-bold text-xs mb-2">{{ nombreServicio }}</div>
         <p class="text-gray-700 text-base">${{ precioServicio }}</p>
       </div>
       <div class="px-6 pt-4 pb-2"></div>

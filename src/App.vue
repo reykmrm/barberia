@@ -1,5 +1,4 @@
 <template>
-
   <nav class="">
     <router-link to="/">INICIO</router-link> |
     <router-link to="/cortedamas">MUJERES</router-link> |
@@ -44,7 +43,6 @@ import { defineComponent } from 'vue'
 import { mapMutations, } from 'vuex'
 import componetInput from './components/componetInput.vue'
 import HelloWorldf from '@/components/componentServicios.vue'
-
 export default defineComponent({
   data() {
     return {
@@ -52,7 +50,6 @@ export default defineComponent({
       resultBusqueda: '',
     }
   },
-
   components: {
     componetInput,
     HelloWorldf,
@@ -78,7 +75,6 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .input{
   margin-right:15px;
 }
@@ -86,7 +82,6 @@ export default defineComponent({
   display: flex;
   float: right;
 }
-
 nav {
   font-family: inherit;
   padding-top: 20px;
@@ -99,16 +94,13 @@ nav {
   right: 0;
   z-index: 11;
 }
-
 nav a {
   font-weight: bold;
   padding: 20px;
 }
-
 nav a.router-link-exact-active {
   color: #ffb300;
 }
-
 .botonLogin{
   margin-right: 20px;
 }
