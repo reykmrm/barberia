@@ -3,11 +3,11 @@
     <router-link to="/informaciondetallemujerView">
       <div class="destacados">
         <h1 class="titulo">
-          <a href="#">Destacados</a>
+          <a href="#">Resultado encontrados {{ buscarServicio.length }}</a>
         </h1>
         <hello-worldf
           class="contenido"
-          v-for="(cortes, indexSercicio) in filterMujerS"
+          v-for="(cortes, indexSercicio) in buscarServicio"
           :key="indexSercicio"
           :precioServicio="cortes.precio"
           :nombreServicio="cortes.nombre"
@@ -26,9 +26,12 @@ import HelloWorldf from "@/components/componentServicios.vue";
 import { mapState, mapMutations, mapGetters } from "vuex";
 
 export default {
+  props: {
+    busquedaBoton: []
+  },
   computed: {
-    ...mapState(["cortesHombres", "tipoPersonaS"]),
-    ...mapGetters(["filterMujerS"]),
+    ...mapState(["cortesHombres", "resultadoBusqueda"]),
+    ...mapGetters(["buscarServicio"]),
   },
   data() {
     return {

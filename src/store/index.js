@@ -83,6 +83,7 @@ export default createStore({
   ],
   //variable que almacena la informcion amostrar de faca filtro en cada ventana hombre o mujer etc
   tipoPersonaS: [],
+  resultadoBusqueda: [],
   },
 
   getters: {
@@ -100,17 +101,25 @@ export default createStore({
     filterPeinados(state){
       state.tipoPersonaS = state.cortesHombres.filter((elem) => elem.tipoPersona === 'peinados')
       return state.tipoPersonaS
-    }  
+    },
+    buscarServicio(state,){
+      state.tipoPersonaS = state.cortesHombres.filter((elem) => elem.nombre.includes(state.resultadoBusqueda))
+      if(state.tipoPersonaS.length !== ['']){
+        return state.tipoPersonaS
+      }else{
+        return state.tipoPersonaS= ['no se encontraron resultados']
+      }
+      
+    },  
   },
   mutations: {
     //metodo que me captura la posicion seleccionada al dar click
     tomarId(state, n){
       state.valor = n
     },
-    buscarServicio(state,dato){
-      state.tipoPersonaS = state.cortesHombres.filter((elem) => elem.nombre.includes(dato))
-      return state.tipoPersonaS,
-      console.log(state.tipoPersonaS)
+     //metodo que me captura la posicion seleccionada al dar click
+     tomarBusqueda(state, n){
+      state.resultadoBusqueda = n
     },
   },
   actions: {

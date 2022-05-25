@@ -66,7 +66,7 @@
 				<h1 class="titulo">LA FELICIDAD ES AHORA</h1>
 				<p class="texto text-justify">
 					Algún día en cualquier parte, en cualquier lugar, te encontrarás a ti
-					mismo y justo ese momento seré el mas feliz o el menos feliz
+					mismo y justo ese momento serà el mas feliz 
 				</p>
 				<h1
 					class="titulo text-right my-0 mx-36 text-9xl text-red-400 font-extralight"
@@ -86,6 +86,9 @@ import SliderTaiwin from '@/components/componentSlider.vue';
 import { mapState, mapMutations, mapGetters } from 'vuex';
 
 export default {
+	props: {
+	busquedaBoton:[],
+	},
 	computed: {
 		...mapState(['cortesHombres']),
 		...mapGetters(['filterMujerS', 'filterHombresS', 'filterPeinados']),
