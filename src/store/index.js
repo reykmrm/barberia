@@ -6,7 +6,7 @@ export default createStore({
     valor: 1,
     //arrary con la informacion de todos los cortes, peinados y stetica
     cortesHombres: [
-      { nombre: 'Degradado Alto', precio: 300, src: require('../assets/hombre/degradadoAlto.jpeg'), 
+      { nombre: 'Degradado Alto', precio: 3000, src: require('../assets/hombre/degradadoAlto.jpeg'), 
         //descripcion: '“El peinado correcto puede convertir a una mujer común en hermosa y a una mujer hermosa en inolvidable”',
         tipoPersona: 'hombre'
       },
@@ -79,7 +79,7 @@ export default createStore({
   //array donde almaceno las personas que pueden prestar el servicio
   personas:[
     {nombre:'Emmanuel'},
-    { nombre: 'reyk', precio: 20000, src: require('../assets/imagenq.png') }
+    { nombre: 'reyk', precio: 20000, src: require('../assets/imagenq.png') },
   ],
   //variable que almacena la informcion amostrar de faca filtro en cada ventana hombre o mujer etc
   tipoPersonaS: [],

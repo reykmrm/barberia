@@ -15,6 +15,24 @@
 							v-for="(cortes, indexSercicio) in filterHombresS"
 							:key="indexSercicio"
 							:precioServicio="cortes.precio"
+							nombreServicio="emmanuel"
+							:src-imagen="cortes.src"
+							:indexSercicio="indexSercicio"
+							v-on:click="tomarId(indexSercicio)"
+						/>
+					</div>
+				</router-link>
+			</div>
+
+			<div class="overflow-x-scroll overflow-x-clip tamano1">
+				<h1 class="titulo">Destacados</h1>
+				<router-link to="/InformacionDetalleView">
+					<div class="destacados">
+						<hello-worldf
+							class="contenido"
+							v-for="(cortes, indexSercicio) in filterHombresS"
+							:key="indexSercicio"
+							:precioServicio="cortes.precio"
 							:nombreServicio="cortes.nombre"
 							:src-imagen="cortes.src"
 							:indexSercicio="indexSercicio"
@@ -24,7 +42,7 @@
 				</router-link>
 			</div>
 
-						<div class="overflow-x-scroll overflow-x-clip tamano1">
+			<div class="overflow-x-scroll overflow-x-clip tamano1">
 				<h1 class="titulo">Destacados</h1>
 				<router-link to="/InformacionDetalleView">
 					<div class="destacados">
@@ -66,12 +84,12 @@
 				<h1 class="titulo">LA FELICIDAD ES AHORA</h1>
 				<p class="texto text-justify">
 					Algún día en cualquier parte, en cualquier lugar, te encontrarás a ti
-					mismo y justo ese momento serà el mas feliz 
+					mismo y justo ese momento serà el mas feliz
 				</p>
 				<h1
 					class="titulo text-right my-0 mx-36 text-9xl text-red-400 font-extralight"
 				>
-					Has el cambio
+					Haz el cambio
 				</h1>
 			</div>
 		</div>
@@ -87,7 +105,7 @@ import { mapState, mapMutations, mapGetters } from 'vuex';
 
 export default {
 	props: {
-	busquedaBoton:[],
+		busquedaBoton: [],
 	},
 	computed: {
 		...mapState(['cortesHombres']),

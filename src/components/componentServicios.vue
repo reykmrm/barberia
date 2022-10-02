@@ -1,6 +1,6 @@
 <template>
   <!-- card con precios y nombre del servicio -->
-  <div class="tamano xs:m-30">
+  <div class="tamano xs:m-30 prueba">
     <div class="rounded-2xl overflow-hidden shadow-lg rounded-3xl">
       <img class="tamanoIme" :src="srcImagen" alt="Sunset in the mountains" />
       <div class="px-6 py-4">
@@ -16,7 +16,7 @@
 export default {
   props: {
     //precio que aparece en el car
-    precioServicio: [],
+    precioServicio: String,
     //nombre del servicio del card
     nombreServicio: [],
     //imagen que aparece en el car
@@ -39,6 +39,7 @@ export default {
   padding: 10px;
   border-radius: 50%;
 }
+
 .tamano {
   margin-top: 30px;
   width: 200px;
